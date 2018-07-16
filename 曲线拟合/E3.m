@@ -1,0 +1,10 @@
+clear
+x=0:0.1:1;
+y=[-.447,1.978,3.28,6.16,7.08,7.34,7.66,9.56,9.48,9.3,11.2];
+x1=0:0.01:1
+p=polyfit(x,y,2)
+z=polyval(p,x1)
+p10=polyfit(x,y,10)
+z10=polyval(p10,x1)
+plot(x,y,'bo--',x1,z,'k',x1,z10,'r')
+legend('original','2','10')
